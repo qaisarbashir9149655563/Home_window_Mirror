@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { MyContext } from "../../utilities/myContext";
+import { MyContext } from "../../contextHook/myContext";
 import { Card, Typography, Layout } from "antd";
-const { Header, Content, Sider, Footer } = Layout;
+const { Sider } = Layout;
 const SingleProduct = () => {
   const context = useContext(MyContext);
   if (context === undefined) {
@@ -13,16 +13,17 @@ const SingleProduct = () => {
   return (
     <div>
       <Layout>
-        <Card>
-          <Card
-            hoverable
-            style={{ width: 400, marginBottom: "20px" }}
-            cover={<img alt={selectedImage?.alt} src={selectedImage?.image} />}
-          ></Card>
-        </Card>
-        <Sider style={{ width: "1000px", marginLeft: "200px" }}>
-          <Typography.Title level={1} style={{ margin: 0, color: "white" }}>
-            Tribal CulT
+        <Card
+          hoverable
+          style={{ width: 400, marginBottom: "20px" }}
+          cover={<img alt={selectedImage?.alt} src={selectedImage?.image} />}
+        ></Card>
+        <Sider style={{ width: 800, backgroundColor: "white" }}>
+          <Typography.Title
+            level={1}
+            style={{ margin: 0, color: "black", width: 800 }}
+          >
+            Tribal CulTjkhkjkjoijojijojojiojojoijiojioji
           </Typography.Title>
         </Sider>
       </Layout>

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Card, Col } from "antd";
 import "./showProducts.css";
 import { Link } from "react-router-dom";
-import { MyContext } from "../../utilities/myContext";
+import { MyContext } from "../../contextHook/myContext";
 import SingleProduct from "../Product/product";
-import { useSelectedImage } from "../../utilities/myContext";
+import { useSelectedImage } from "../../contextHook/myContext";
 const { Meta } = Card;
 interface ShowProductsProps {
   key: number;
