@@ -42,6 +42,6 @@ const UserSchema = new mongoose_1.default.Schema({
         type: String,
         required: true,
     },
-}, { timestamps: true });
-const UserDetail = (0, mongoose_1.model)("UserSchema", UserSchema);
+}, { timestamps: false });
+const UserDetail = (0, mongoose_1.model)("userschema", UserSchema);
 exports.default = UserDetail;
