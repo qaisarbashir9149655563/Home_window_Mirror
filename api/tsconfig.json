@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "types": ["jest", "node", "cors"],
+    "types": ["node", "cors"],
     "outDir": "dist",
     "target": "es2017",
     "allowJs": true,
