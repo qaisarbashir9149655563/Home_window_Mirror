@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "types": ["jest", "node", "cors"],
+    "outDir": "dist",
+    "target": "es2017",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "isolatedModules": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": false
+  },
+  "include": [
+    "controller/**/**/*.ts",
+    "database/**/*.ts",
+    "utils/**/*.{ts,js}",
+    "config/*.json",
+    "test/*.ts",
+    "*.ts"
+  ],
+  "exclude": ["node_modules"],
+  "types": ["node"]
+}

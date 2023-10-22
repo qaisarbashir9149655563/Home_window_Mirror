@@ -1,0 +1,27 @@
+.btn-info {
+  margin: 0 0 0 615px;
+  width: 110px;
+}
+.custom-class-userfrom {
+  margin: 0 0 0 50px;
+  padding: 0;
+  fieldset {
+    div {
+      p {
+        margin: 20px;
+        font-size: 18px;
+      }
+      label {
+        display: block;
+        margin: 20px;
+        font-size: 18px;
+      }
+      input,
+      textarea {
+        max-width: 500px;
+        margin: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
