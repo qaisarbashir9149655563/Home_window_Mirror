@@ -11,6 +11,7 @@ import Carousal from "./carousal";
 import { HeaderSec } from "./header/headerSection";
 import { UserForm } from "../FormPage/userForm";
 import ShowUsersDataToAdmin from "../admin/showUsersData";
+import ThankYou from "../FormPage/thankYouComp";
 const { Content, Footer } = Layout;
 
 const Dashboard: React.FC = () => {
@@ -46,6 +47,7 @@ const Dashboard: React.FC = () => {
               <Route path="/product" element={<SingleProduct />} />
               <Route path="/userFrom" element={<UserForm />} />
               <Route path="/admin" element={<ShowUsersDataToAdmin />} />
+              <Route path="/thankyou" element={<ThankYou />} />
             </Routes>
           </Content>
         </Layout>

@@ -2,19 +2,30 @@ import React from "react";
 import Form from "@rjsf/core";
 import "./userForm.scss";
 import { schemaUserForm, uiSchemaUserForm } from "./config";
+import { useNavigate } from "react-router-dom";
 import validator from "@rjsf/validator-ajv8";
 import { createUserDetail } from "../../services/userDetail.service";
 export const UserForm = () => {
-  // const [formData, setFormData] = React.useState({});
+  const history = useNavigate();
   const handleSubmit = async ({ formData }: any) => {
-    // setFormData(formData);
-    const res = await createUserDetail(formData);
-    console.log(res, "res");
+    try {
+      if (
+        formData.name &&
+        formData.email &&
+        formData.phoneNumber &&
+        formData.address
+      ) {
+        history("/thankyou");
+        await createUserDetail(formData);
+        formData = {};
+      }
+    } catch (error) {
+      console.log(
+        error,
+        "error while creating user detail in userForm component"
+      );
+    }
   };
-  // const handleOnChange = ({ formData }: any) => {
-  // console.log(formData, "formData on change");
-  // on change i can use here
-  // };
 
   return (
     <Form
