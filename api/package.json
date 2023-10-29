@@ -4,8 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "npm install && npx tsc"
+    "start": "nodemon index.ts",
+    "build": "npm install && npx tsc",
+    "debug": "nodemon --config nodemon.debug.json index.ts"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "envalid": "^8.0.0",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   }
 }
