@@ -6,7 +6,7 @@ const { Title, Paragraph } = Typography;
 const About = () => {
   return (
     <Content style={{ padding: "24px" }}>
-      <Title level={2}>About Us</Title>
+      <Title level={2}>About Us{"true"}</Title>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec ante
         vel justo iaculis bibendum. Suspendisse potenti.
