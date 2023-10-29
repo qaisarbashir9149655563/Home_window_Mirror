@@ -8,7 +8,7 @@ import cors from "cors";
 import routes from "./routes";
 
 const app = express();
-const port = env.PORT || 8000;
+const port = env.PORT || 10000;
 app.use(cors());
 app.use(bodyParser.json());
 

@@ -1,0 +1,11 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "verbose": true,
+  "execMap": {
+    "js": "node --inspect"
+  },
+  "watch": ["index.ts", "controller", "database", "utils"],
+  "exec": "ts-node-dev --inspect -- index.ts",
+  "ext": "js ts"
+}
