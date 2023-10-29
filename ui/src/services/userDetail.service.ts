@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:10000/api/";
+const API_URL = "https://home-window-mirro.onrender.com/api/";
 
 export const getUserDetail = async () => {
   try {
