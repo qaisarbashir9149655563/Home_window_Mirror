@@ -22,7 +22,7 @@ const ShowProducts: React.FC<ShowProductsProps> = ({
 }) => {
   const { selectedImage, setSelectedImage } = useSelectedImage();
   return (
-    <Col span={8}>
+    <Col key={key} xs={24} sm={12} md={12} lg={8}>
       <Link to="/product">
         <Card
           hoverable
