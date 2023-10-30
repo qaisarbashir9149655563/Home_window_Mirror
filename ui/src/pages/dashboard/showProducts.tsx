@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../../contextHook/myContext";
 import SingleProduct from "../Product/product";
 import { useSelectedImage } from "../../contextHook/myContext";
+import BookAnAppButton from "../../utils/bookAnAppointment";
 const { Meta } = Card;
 interface ShowProductsProps {
   key: number;
@@ -32,7 +33,8 @@ const ShowProducts: React.FC<ShowProductsProps> = ({
             setSelectedImage({ image: image, title: title, alt: alt })
           }
         >
-          <Meta title={title} description={description} />
+          {/* <Meta title={title} description={description} /> */}
+          <BookAnAppButton />
         </Card>
       </Link>
     </Col>

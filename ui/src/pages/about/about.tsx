@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Layout } from "antd";
+import BookAnAppButton from "../../utils/bookAnAppointment";
 
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
@@ -15,6 +16,7 @@ const About = () => {
         Fusce nec orci ac libero rutrum varius. Quisque finibus, est ac auctor
         commodo, erat leo dignissim libero.
       </Paragraph>
+      <BookAnAppButton />
     </Content>
   );
 };

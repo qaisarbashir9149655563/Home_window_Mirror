@@ -17,15 +17,6 @@ export const HeaderSec = () => {
           <Link to="/about">About</Link>
         </Menu.Item>
       </Menu>
-      <Link to="/userFrom">
-        <Button
-          className="button-appointment"
-          type="default"
-          style={{ marginTop: "10px", marginLeft: "50px" }}
-        >
-          Book an appointment
-        </Button>
-      </Link>
     </Header>
   );
 };
