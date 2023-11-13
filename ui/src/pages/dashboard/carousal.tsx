@@ -12,7 +12,7 @@ const Carousal = () => {
   return (
     <Carousel autoplay>
       <div>
-        <h3 style={contentStyle}>1</h3>
+        <h2 style={contentStyle}>Who We Are?</h2>
       </div>
       <div>
         <h3 style={contentStyle}>2</h3>
