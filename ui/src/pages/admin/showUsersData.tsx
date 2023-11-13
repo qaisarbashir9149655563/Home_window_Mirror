@@ -1,8 +1,14 @@
 import React, { useEffect } from "react";
 import { getUserDetail } from "../../services/userDetail.service";
-import { Table } from "antd";
+import { Popconfirm, Table } from "antd";
+import { deleteUserDetail } from "../../services/userDetail.service";
 const ShowUsersDataToAdmin = () => {
   const [users, setUsers] = React.useState([]);
+  const [dataSource, setDataSource] = React.useState([]);
+  const handleDelete = async (key: React.Key) => {
+    const resp = await deleteUserDetail(key);
+    if (resp) setDataSource(resp);
+  };
   useEffect(() => {
     getUserDetail()
       .then((res) => {
@@ -11,7 +17,7 @@ const ShowUsersDataToAdmin = () => {
       .catch((err) => {
         console.log(err, "error in get user detail method");
       });
-  }, []);
+  }, [dataSource]);
 
   const columns = [
     {
@@ -33,6 +39,19 @@ const ShowUsersDataToAdmin = () => {
       title: "Phone Number",
       dataIndex: "phoneNumber",
       key: "phoneNumber",
+    },
+    {
+      title: "operation",
+      dataIndex: "operation",
+      render: (_: any, record: any) =>
+        users.length >= 1 ? (
+          <Popconfirm
+            title="Sure to delete?"
+            onConfirm={() => handleDelete(record._id)}
+          >
+            <a>Delete</a>
+          </Popconfirm>
+        ) : null,
     },
   ];
 

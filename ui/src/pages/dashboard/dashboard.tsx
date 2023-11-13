@@ -6,7 +6,6 @@ import "./allSections.css";
 import ProductsContent from "./productContent/productsContent";
 import { Routes, Route } from "react-router-dom";
 import About from "../about/about";
-import SingleProduct from "../Product/product";
 import Carousal from "./carousal";
 import { HeaderSec } from "./header/headerSection";
 import { UserForm } from "../FormPage/userForm";
@@ -44,7 +43,6 @@ const Dashboard: React.FC = () => {
                 element={<ProductsContent productsList={ProductsList} />}
               />
               <Route path="/about" element={<About />} />
-              <Route path="/product" element={<SingleProduct />} />
               <Route path="/userFrom" element={<UserForm />} />
               <Route path="/admin" element={<ShowUsersDataToAdmin />} />
               <Route path="/thankyou" element={<ThankYou />} />

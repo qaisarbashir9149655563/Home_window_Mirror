@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const API_URL = "https://home-window-mirro.onrender.com/api/";
+// const API_URL = "http://localhost:10000/api/";
 
 export const getUserDetail = async () => {
   try {
@@ -30,5 +31,15 @@ export const createUserDetail = async (formData: any) => {
     }
   } catch (error) {
     console.log(error, "while fetching user detail");
+  }
+};
+export const deleteUserDetail = async (id: any) => {
+  try {
+    const response = await axios.delete(`${API_URL}user/delete/${id}`);
+    if (response?.data) {
+      return response?.data;
+    }
+  } catch (error) {
+    console.log(error, "while fetching deleting detail");
   }
 };

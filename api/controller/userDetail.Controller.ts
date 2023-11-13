@@ -20,3 +20,11 @@ export const getUserDetail = async (req: Request, res: Response) => {
     console.log(error);
   }
 };
+export const deleteUserDetail = async (req: Request, res: Response) => {
+  try {
+    const user = await UserDetail.findByIdAndDelete(req.params.id).exec();
+    res.status(200).json({ user });
+  } catch (error) {
+    console.log(error);
+  }
+};
