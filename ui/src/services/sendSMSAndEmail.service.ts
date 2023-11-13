@@ -11,7 +11,7 @@ export const sendMail = async (formData: any) => {
     },
   };
   try {
-    const res = await axios.post(`${API_URL}/api/sendMail`, payload);
+    const res = await axios.post(`${API_URL}/sendMail`, payload);
     console.log(res);
     return res;
   } catch (err) {
