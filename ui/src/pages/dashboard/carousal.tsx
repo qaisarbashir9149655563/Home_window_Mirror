@@ -11,12 +11,7 @@ const Carousal = () => {
   };
   return (
     <div className="carousal">
-      <Carousel
-        autoplay
-        className="custom-carousel"
-        speed={1000}
-        dotPosition="right"
-      >
+      <Carousel autoplay className="custom-carousel" speed={1000}>
         <div>
           <img
             src="https://images.pexels.com/photos/6402384/pexels-photo-6402384.jpeg?auto=compress&cs=tinysrgb&w=800"
