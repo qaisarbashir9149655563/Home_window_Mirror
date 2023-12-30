@@ -1,10 +1,14 @@
 import Dashboard from "./pages/dashboard/dashboard";
-import { SelectedImageProvider } from "./contextHook/myContext";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "./utils/reducers";
+
+const store = createStore(rootReducer);
 const App = () => {
   return (
-    <SelectedImageProvider>
+    <Provider store={store}>
       <Dashboard />
-    </SelectedImageProvider>
+    </Provider>
   );
 };
 
