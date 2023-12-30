@@ -10,7 +10,7 @@ export const schemaUserForm: RJSFSchema = {
   },
 };
 export const uiSchemaUserForm = {
-  "ui:classNames": "custom-class-userfrom",
+  "ui:classNames": "primary custom-class-userfrom",
   name: {
     "ui:classNames": "custom-class-name",
     "ui:autofocus": true,

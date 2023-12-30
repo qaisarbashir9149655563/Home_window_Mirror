@@ -3,37 +3,28 @@ import React, { useState, useContext } from "react";
 interface MyContextPropsType {
   children: React.ReactNode;
 }
-interface useStateProps {
-  image: string;
-  title: string;
-  alt: string;
-}
+
 interface MyContextProps {
-  selectedImage: useStateProps | undefined;
-  setSelectedImage: React.Dispatch<React.SetStateAction<useStateProps>>;
+  loginVisible: boolean | undefined;
+  setLoginVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const MyContext = React.createContext<MyContextProps | undefined>(
   undefined
 );
 
-export const SelectedImageProvider: React.FC<MyContextPropsType> = ({
+export const LoginVisibleProvider: React.FC<MyContextPropsType> = ({
   children,
 }) => {
-  const [selectedImage, setSelectedImage] = useState({
-    image: "",
-    title: "",
-    alt: "",
-  });
-
+  const [loginVisible, setLoginVisible] = useState(false);
   return (
-    <MyContext.Provider value={{ selectedImage, setSelectedImage }}>
+    <MyContext.Provider value={{ loginVisible, setLoginVisible }}>
       {children}
     </MyContext.Provider>
   );
 };
 
-export const useSelectedImage = () => {
+export const useMyContext = () => {
   const context = useContext(MyContext);
   if (context === undefined) {
     throw new Error(
